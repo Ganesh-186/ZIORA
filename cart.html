@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIORA - Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>ZIORA</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+      <p class="navbar-link"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cart-count">0</span>)</a></p>
+      <p class="navbar-link" id="auth-link"></p>
+    </div>
+    <div class="navbar-menu-toggle"><i class="fa-solid fa-bars" onclick="shownavbar()"></i></div>
+  </nav>
+
+  <div class="side-navbar">
+    <div class="side-navbar-header">
+      <h2>Shop</h2>
+      <i class="fa-solid fa-xmark side-navbar-close" onclick="hidenavbar()"></i>
+    </div>
+    <div class="side-navbar-links">
+      <div class="side-navbar-link"><a href="index.html">Home</a></div>
+      <div class="side-navbar-link"><a href="collection.html">Collection</a></div>
+      <div class="side-navbar-link"><a href="contact.html">Contact</a></div>
+      <div class="side-navbar-link"><a href="cart.html">Cart</a></div>
+      <div class="side-navbar-link" id="side-auth-link"></div>
+    </div>
+  </div>
+
+  <div class="cart-section">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    <div class="cart-actions">
+    <button id="checkout-btn" class="checkout-btn">Checkout</button>
+    <button id="clear-cart-btn" class="clear-btn">Clear Cart</button>
+    </div>
+  </div>
+
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

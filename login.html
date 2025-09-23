@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIORA - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>ZIORA</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+      <p class="navbar-link"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cart-count">0</span>)</a></p>
+      <p class="navbar-link" id="auth-link"></p>
+    </div>
+    <div class="navbar-menu-toggle"><i class="fa-solid fa-bars" onclick="shownavbar()"></i></div>
+  </nav>
+
+  <div class="side-navbar">
+    <div class="side-navbar-header">
+      <h2>Shop</h2>
+      <i class="fa-solid fa-xmark side-navbar-close" onclick="hidenavbar()"></i>
+    </div>
+    <div class="side-navbar-links">
+      <div class="side-navbar-link"><a href="index.html">Home</a></div>
+      <div class="side-navbar-link"><a href="collection.html">Collection</a></div>
+      <div class="side-navbar-link"><a href="contact.html">Contact</a></div>
+      <div class="side-navbar-link"><a href="cart.html">Cart</a></div>
+      <div class="side-navbar-link" id="side-auth-link"></div>
+    </div>
+  </div>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="error-message" id="login-error" style="display:none;">Invalid email or password</div>
+        <label>Email</label>
+        <input type="email" id="login-email" placeholder="Enter your email" required>
+        <label>Password</label>
+        <input type="password" id="login-password" placeholder="Enter your password" required>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+      <p class="login-text">Don’t have an account? <a href="signup.html">Sign Up</a></p>
+      <p class="login-text">Forgot your password? <a href="forgot-password.html">Click here</a></p>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <h2>ZIORA</h2>
+      <p>Your destination for the latest trends in fashion and style.</p>
+      <div class="footer-icons">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

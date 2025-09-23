@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIORA - Collections</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Rancho&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>ZIORA</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+      <p class="navbar-link"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cart-count">0</span>)</a></p>
+      <p class="navbar-link" id="auth-link"></p>
+    </div>
+    <div class="navbar-menu-toggle">
+      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
+    </div>
+  </nav>
+
+  <!-- Side Navbar -->
+  <div class="side-navbar">
+    <div class="side-navbar-header">
+      <h2>Shop</h2>
+      <i class="fa-solid fa-xmark side-navbar-close" onclick="hidenavbar()"></i>
+    </div>
+    <div class="side-navbar-links">
+      <div class="side-navbar-link"><a href="index.html">Home</a></div>
+      <div class="side-navbar-link"><a href="collection.html">Collection</a></div>
+      <div class="side-navbar-link"><a href="contact.html">Contact</a></div>
+      <div class="side-navbar-link"><a href="cart.html">Cart</a></div>
+      <div class="side-navbar-link" id="side-auth-link"></div>
+    </div>
+  </div>
+
+   <div class="search-section">
+    <input id="search" type="text" placeholder="Search for products...">
+    <button><i class="fa-solid fa-search"></i></button>
+  </div>
+
+  <div class="products">
+    <!-- Product 1 -->
+    <div class="products-box" data-category="tshirt" data-gender="men" data-price="299">
+      <a href="product.html?id=1" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1671656349262-1e1d3e09735c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sandal T-shirt">
+        <h3>Sandal T-shirt</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="products-box" data-category="tshirt" data-gender="men" data-price="299">
+      <a href="product.html?id=2" class="product-link">
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Black T-shirt">
+        <h3>Black T-shirt</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="products-box" data-category="tshirt" data-gender="men" data-price="299">
+      <a href="product.html?id=3" class="product-link">
+        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHNoaXJ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="White T-shirt">
+        <h3>White T-shirt</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="products-box" data-category="tshirt" data-gender="men" data-price="299">
+      <a href="product.html?id=4" class="product-link">
+        <img src="https://images.unsplash.com/photo-1516442443906-71605254b628?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHRzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="Grey T-shirt">
+        <h3>Grey T-shirt</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="products-box" data-category="tshirt" data-gender="women" data-price="699">
+      <a href="product.html?id=5" class="product-link">
+        <img src="https://images.unsplash.com/photo-1716951848908-8907bb6c655b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fHRzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="3 T-shirts Combo">
+        <h3>3 T-shirts Combo</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="products-box" data-category="tshirt" data-gender="men" data-price="799">
+      <a href="product.html?id=6" class="product-link">
+        <img src="https://images.unsplash.com/photo-1716951923523-0c76b14d4852?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fHRzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="4 T-shirts Combo">
+        <h3>4 T-shirts Combo</h3>
+        <p>₹799</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="products-box" data-category="shirt" data-gender="men" data-price="599">
+      <a href="product.html?id=7" class="product-link">
+        <img src="https://images.unsplash.com/photo-1602810320073-1230c46d89d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue dotted Shirt">
+        <h3>Blue dotted Shirt</h3>
+        <p>₹599</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="products-box" data-category="shirt" data-gender="men" data-price="799">
+      <a href="product.html?id=8" class="product-link">
+        <img src="https://images.unsplash.com/photo-1602810319250-a663f0af2f75?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="2 Shirt Combo">
+        <h3>2 Shirt Combo</h3>
+        <p>₹799</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="products-box" data-category="shirt" data-gender="men" data-price="999">
+      <a href="product.html?id=9" class="product-link">
+        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdellaGtkfDZ8fHxlbnwwfHx8fHw%3D" alt="3 Shirt Combo">
+        <h3>3 Shirt Combo</h3>
+        <p>₹999</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="products-box" data-category="shirt" data-gender="men" data-price="499">
+      <a href="product.html?id=10" class="product-link">
+        <img src="https://images.unsplash.com/photo-1740711152088-88a009e877bb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8" alt="Blue Shirt">
+        <h3>Blue Shirt</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 11 -->
+    <div class="products-box" data-category="shirt" data-gender="men" data-price="499">
+      <a href="product.html?id=11" class="product-link">
+        <img src="https://images.unsplash.com/photo-1602810317536-5d5e8a552d15?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHNoaXJ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="White Shirt">
+        <h3>White Shirt</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 12 -->
+    <div class="products-box" data-category="tshirt" data-gender="women" data-price="299">
+      <a href="product.html?id=12" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1690349404248-3ddd9be40eb1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTgxfHxzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="White T-shirt for womens">
+        <h3>White T-shirt for womens</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 13 -->
+    <div class="products-box" data-category="tshirt" data-gender="women" data-price="299">
+      <a href="product.html?id=13" class="product-link">
+        <img src="https://images.unsplash.com/photo-1609616399839-46fb4e90c560?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTgwfHxzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="Black T-shirt for womens">
+        <h3>Black T-shirt for womens</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 14 -->
+    <div class="products-box" data-category="shirt" data-gender="women" data-price="499">
+      <a href="product.html?id=14" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1671641797133-1e487350dfae?w=600&auto=format&fit=c crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjIxfHxzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="Pink Shirt for womens">
+        <h3>Pink Shirt for womens</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 15 -->
+    <div class="products-box" data-category="shirt" data-gender="women" data-price="499">
+      <a href="product.html?id=15" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1691622500878-15ee2528ab38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjMzfHxzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="Navy Blue Shirt for womens">
+        <h3>Navy Blue Shirt for womens</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 16 -->
+    <div class="products-box" data-category="tshirt" data-gender="women" data-price="299">
+      <a href="product.html?id=16" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1691367279675-0e466cfb5135?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjM3fHxzaGlydHN8ZW58MHx8MHx8fDA%3D" alt="Marron T-shirt for womens">
+        <h3>Marron T-shirt for womens</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 17 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="799">
+      <a href="product.html?id=17" class="product-link">
+        <img src="https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFudHxlbnwwfHwwfHx8MA%3D%3D" alt="Light Blue Jean for men">
+        <h3>Light Blue Jean for men</h3>
+        <p>₹799</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 18 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="799">
+      <a href="product.html?id=18" class="product-link">
+        <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFudHxlbnwwfHwwfHx8MA%3D%3D" alt="Dark Blue faded jean for men">
+        <h3>Dark Blue faded jean for men</h3>
+        <p>₹799</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 19 -->
+    <div class="products-box" data-category="pants" data-gender="women" data-price="299">
+      <a href="product.html?id=19" class="product-link">
+        <img src="https://images.unsplash.com/photo-1602573991155-21f0143bb45c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBhbnR8ZW58MHx8MHx8fDA%3D" alt="Gray Track for womens">
+        <h3>Gray Track for womens</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 20 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="699">
+      <a href="product.html?id=20" class="product-link">
+        <img src="https://images.unsplash.com/photo-1584865288642-42078afe6942?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhbnT8ZW58MHx8MHx8fDA%3D" alt="Black cotton jean for men">
+        <h3>Black cotton jean for men</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 21 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="699">
+      <a href="product.html?id=21" class="product-link">
+        <img src="https://images.unsplash.com/photo-1724627561744-6350067436ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHBhbnR8ZW58MHx8MHx8fDA%3D" alt="Black faded jean for men">
+        <h3>Black faded jean for men</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 22 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="299">
+      <a href="product.html?id=22" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1663036703748-fc4133bd54eb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhY2slMjBwYW50c3xlbnwwfHwwfHx8MA%3D%3D" alt="Black tracks for mens">
+        <h3>Black tracks for mens</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 23 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="299">
+      <a href="product.html?id=23" class="product-link">
+        <img src="https://images.unsplash.com/photo-1753381686374-47ebeb5771b4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHJhY2slMjBwYW50c3xlbnwwfHwwfHx8MA%3D%3D" alt="Gray Tracks for men">
+        <h3>Gray Tracks for men</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 24 -->
+    <div class="products-box" data-category="pants" data-gender="women" data-price="499">
+      <a href="product.html?id=24" class="product-link">
+        <img src="https://images.unsplash.com/photo-1603268543147-e27145103706?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRyYWNrJTIwcGFudHN8ZW58MHx8MHx8fDA%3D" alt="Blue jean for women">
+        <h3>Blue jean for women</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 25 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="299">
+      <a href="product.html?id=25" class="product-link">
+        <img src="https://images.unsplash.com/photo-1595187975449-38c186282ca5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRyYWNrJTIwcGFudHN8ZW58MHx8MHx8fDA%3D" alt="Marron colour Track">
+        <h3>Marron colour Track</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 26 -->
+    <div class="products-box" data-category="pants" data-gender="men" data-price="299">
+      <a href="product.html?id=26" class="product-link">
+        <img src="https://images.unsplash.com/photo-1711175017307-bbacf7c2ca13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRyYWNrJTIwcGFudHN8ZW58MHx8MHx8fDA%3D" alt="Beige Colour Track">
+        <h3>Beige Colour Track</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 27 -->
+    <div class="products-box" data-category="pants" data-gender="women" data-price="299">
+      <a href="product.html?id=27" class="product-link">
+        <img src="https://images.unsplash.com/photo-1641808887823-b3201916a57d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHRyYWNrJTIwcGFudHN8ZW58MHx8MHx8fDA%3D" alt="Brown Track for women">
+        <h3>Brown Track for women</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 28 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=28" class="product-link">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Red Nike Shoes">
+        <h3>Red Nike Shoes</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 29 -->
+    <div class="products-box" data-category="shoes" data-gender="women" data-price="599">
+      <a href="product.html?id=29" class="product-link">
+        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Red Sneakers">
+        <h3>Red Sneakers</h3>
+        <p>₹599</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 30 -->
+    <div class="products-box" data-category="shoes" data-gender="women" data-price="499">
+      <a href="product.html?id=30" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1665413642308-c5c1ed052d12?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="White Sneakers">
+        <h3>White Sneakers</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 31 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="599">
+      <a href="product.html?id=31" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1663100769321-9eb8fe5a8e6b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Blue sports Shoes">
+        <h3>Blue sports Shoes</h3>
+        <p>₹599</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 32 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=32" class="product-link">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Black sports Shoes">
+        <h3>Black sports Shoes</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 33 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=33" class="product-link">
+        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Brown Sneakers">
+        <h3>Brown Sneakers</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 34 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="599">
+      <a href="product.html?id=34" class="product-link">
+        <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Black sneakers">
+        <h3>Black sneakers</h3>
+        <p>₹599</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 35 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=35" class="product-link">
+        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww" alt="Green Sports Shoes">
+        <h3>Green Sports Shoes</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 36 -->
+    <div class="products-box" data-category="shoes" data-gender="women" data-price="799">
+      <a href="product.html?id=36" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1671718111684-9142a70a5fe0?w=600&auto=format&fit=c crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHNob2VzfGVufDB8fDB8fHww" alt="Black Boots">
+        <h3>Black Boots</h3>
+        <p>₹799</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 37 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=37" class="product-link">
+        <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHNob2VzfGVufDB8fDB8fHww" alt="Red Shoes">
+        <h3>Red Shoes</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 38 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=38" class="product-link">
+        <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHNob2VzfGVufDB8fDB8fHww" alt="Funcky Shoes">
+        <h3>Funcky Shoes</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 39 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=39" class="product-link">
+        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHNob2VzfGVufDB8fDB8fHww" alt="White Sneaker From Nike">
+        <h3>White Sneaker From Nike</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 40 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=40" class="product-link">
+        <img src="https://plus.unsplash.com/premium_photo-1665664652418-91f260a84842?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHNob2VzfGVufDB8fDB8fHww" alt="Green Sneaker">
+        <h3>Green Sneaker</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 41 -->
+    <div class="products-box" data-category="shirt" data-gender="men" data-price="899">
+      <a href="product.html?id=41" class="product-link">
+        <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVuaW0lMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D" alt="Classic Denim Jacket">
+        <h3>Classic Denim Jacket</h3>
+        <p>₹899</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 42 -->
+    <div class="products-box" data-category="accessories" data-gender="unisex" data-price="799">
+      <a href="product.html?id=42" class="product-link">
+        <img src="https://images.unsplash.com/photo-1510783891783-80cda42ebfd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGxlYXRoZXIlMjBiYWd8ZW58MHx8MHx8fDA%3D" alt="Leather Crossbody Bag">
+        <h3>Leather Crossbody Bag</h3>
+        <p>₹799</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 43 -->
+    <div class="products-box" data-category="accessories" data-gender="unisex" data-price="399">
+      <a href="product.html?id=43" class="product-link">
+        <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2NhcmZ8ZW58MHx8MHx8fDA%3D" alt="Wool Winter Scarf">
+        <h3>Wool Winter Scarf</h3>
+        <p>₹399</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 44 -->
+    <div class="products-box" data-category="accessories" data-gender="unisex" data-price="599">
+      <a href="product.html?id=44" class="product-link">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0Y2h8ZW58MHx8MHx8fDA%3D" alt="Sports Watch">
+        <h3>Sports Watch</h3>
+        <p>₹599</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 45 -->
+    <div class="products-box" data-category="accessories" data-gender="unisex" data-price="499">
+      <a href="product.html?id=45" class="product-link">
+        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Sunglasses">
+        <h3>Sunglasses</h3>
+        <p>₹499</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 46 -->
+    <div class="products-box" data-category="accessories" data-gender="unisex" data-price="299">
+      <a href="product.html?id=46" class="product-link">
+        <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGF0fGVufDB8fDB8fHww" alt="Beanie Hat">
+        <h3>Beanie Hat</h3>
+        <p>₹299</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 47 -->
+    <div class="products-box" data-category="accessories" data-gender="unisex" data-price="699">
+      <a href="product.html?id=47" class="product-link">
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja3BhY2t8ZW58MHx8MHx8fDA%3D" alt="Canvas Backpack">
+        <h3>Canvas Backpack</h3>
+        <p>₹699</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+
+    <!-- Product 48 -->
+    <div class="products-box" data-category="shoes" data-gender="men" data-price="699">
+      <a href="product.html?id=48" class="product-link">
+        <img src="https://images.unsplash.com/photo-1668069226492-508742b03147?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9ybWFsJTIwc2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Formal Leather Shoes">
+        <h3>Formal Leather Shoes</h3>
+        <p>₹899</p>
+      </a>
+      <button class="product-button">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <h2>ZIORA</h2>
+      <p>Your destination for the latest trends in fashion and style.</p>
+      <div class="footer-icons">
+        <i class="fa-brands fa-facebook-f" style="color:white"></i>
+        <i class="fa-brands fa-instagram" style="color:white"></i>
+        <i class="fa-brands fa-twitter" style="color:white"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="collection.js"></script>
+  <script src="filters.js"></script>
+  <!-- Floating Filter Button -->
+<div class="floating-filter-btn" id="floating-filter">
+  <i class="fas fa-filter"></i>
+  <span class="filter-badge" id="floating-filter-count">0</span>
+</div>
+<div id="toast"></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIORA - Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rancho&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>ZIORA</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+      <p class="navbar-link"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cart-count">0</span>)</a></p>
+      <p class="navbar-link" id="auth-link"></p>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Create Account</h2>
+      <form id="signup-form">
+        <label for="email">Email</label>
+        <input type="email" id="signup-email" required placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" id="signup-password" required placeholder="Enter your password">
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="signup-confirm" required placeholder="Confirm your password">
+
+        <label for="security-question">Security Question</label>
+        <select id="signup-question" required>
+          <option value="">-- Select a question --</option>
+          <option value="pet">What is your pet's name?</option>
+          <option value="school">What was the name of your first school?</option>
+          <option value="city">In which city were you born?</option>
+        </select>
+
+        <label for="security-answer">Your Answer</label>
+        <input type="text" id="signup-answer" required placeholder="Enter your answer">
+
+        <div class="error-message" id="signup-error"></div>
+
+        <button type="submit" class="login-button">Sign Up</button>
+      </form>
+      <p class="login-text">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script src="signup.js"></script>
+</body>
+</html>
