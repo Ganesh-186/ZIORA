@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkEmailBtn = document.getElementById("check-email");
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
-  let user = null;
+ 
 
   // Step 1: Check Email
   checkEmailBtn.addEventListener("click", () => {
