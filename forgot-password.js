@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorDiv = document.getElementById("forgot-error");
   const questionSelect = document.getElementById("forgot-question");
   const resetSection = document.getElementById("reset-section");
-  const checkEmailBtn = document.getElementById("check-email");
-
+  const questionSelect = document.getElementById("forgot-question");
+  
   let users = JSON.parse(localStorage.getItem("users")) || [];
- 
+  let user = null;
 
   // Step 1: Check Email
   checkEmailBtn.addEventListener("click", () => {
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // If user exists → show reset section
     questionSelect.value = user.securityQuestion;
     resetSection.style.display = "block";
-    checkEmailBtn.style.display = "none"; // hide next button
-    emailInput.disabled = true;
+    checkEmailBtn.style.display = "none";
+    emailInput.disabled = true
   });
 
   // Step 2: Reset Password
