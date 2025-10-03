@@ -5,37 +5,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmInput = document.getElementById("forgot-confirm");
   const answerInput = document.getElementById("forgot-answer");
   const errorDiv = document.getElementById("forgot-error");
-  const securityContainer = document.getElementById("security-question-container");
   const questionSelect = document.getElementById("forgot-question");
+  const resetSection = document.getElementById("reset-section");
+  const checkEmailBtn = document.getElementById("check-email");
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
   let user = null;
 
-  // Show security question when email is entered
-  emailInput.addEventListener("blur", () => {
+  // Step 1: Check Email
+  checkEmailBtn.addEventListener("click", () => {
     const email = emailInput.value.trim().toLowerCase();
     user = users.find(u => u.email === email);
-    if (user) {
-      questionSelect.value = user.securityQuestion;
-      securityContainer.style.display = "block";
-    } else {
-      securityContainer.style.display = "none";
+
+    if (!user) {
+      showToast("Email not found. Please sign up first.", "error");
+      setTimeout(() => {
+        window.location.href = "signup.html";
+      }, 1500);
+      return;
     }
+
+    // If user exists → show reset section
+    questionSelect.value = user.securityQuestion;
+    resetSection.style.display = "block";
+    checkEmailBtn.style.display = "none"; // hide next button
+    emailInput.disabled = true;
   });
 
+  // Step 2: Reset Password
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (!user) return;
 
-    const email = emailInput.value.trim().toLowerCase();
     const newPassword = passwordInput.value.trim();
     const confirmPassword = confirmInput.value.trim();
     const answer = answerInput.value.trim().toLowerCase();
-
-    if (!user) {
-      errorDiv.textContent = "Email not found. Please sign up first.";
-      errorDiv.style.display = "block";
-      return;
-    }
 
     if (answer !== user.securityAnswer) {
       errorDiv.textContent = "Security answer is incorrect.";
