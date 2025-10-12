@@ -22,7 +22,7 @@ Ziora is a modern **fashion e-commerce website** built using **HTML, CSS, and Ja
 
 ---
 ## 🌐 Live Demo
-🔗 [Ziora Live](https://ganesh-186.github.io/Ziora)
+🔗 [Ziora Live]([https://ganesh-186.github.io/Ziora](https://ganesh-186.github.io/ZIORA/))
 
 ## ⚙️ How to Run
 ```bash
