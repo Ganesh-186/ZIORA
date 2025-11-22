@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorDiv = document.getElementById("forgot-error");
   const questionSelect = document.getElementById("forgot-question");
   const resetSection = document.getElementById("reset-section");
-  const questionSelect = document.getElementById("forgot-question");
-  
+  const checkEmailBtn = document.getElementById("check-email"); // ✅ ADDED
+
   let users = JSON.parse(localStorage.getItem("users")) || [];
   let user = null;
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     questionSelect.value = user.securityQuestion;
     resetSection.style.display = "block";
     checkEmailBtn.style.display = "none";
-    emailInput.disabled = true
+    emailInput.disabled = true;
   });
 
   // Step 2: Reset Password
